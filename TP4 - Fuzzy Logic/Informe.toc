@@ -1,8 +1,0 @@
-\select@language {spanish}
-\thispagestyle {empty}
-\contentsline {section}{\numberline {1}Motivaci\'on}{2}{section.1}
-\contentsline {section}{\numberline {2}Primera Etapa: Infiriendo riesgo de precipitaciones}{2}{section.2}
-\contentsline {section}{\numberline {3}Segunda Etapa: Infiriendo conveniencia de sembrar soja}{3}{section.3}
-\contentsline {section}{\numberline {4}Ejemplos de Uso}{5}{section.4}
-\contentsline {subsection}{\numberline {4.1}Ejemplo 1}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Ejemplo 2}{5}{subsection.4.2}
