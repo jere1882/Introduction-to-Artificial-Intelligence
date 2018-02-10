@@ -1,0 +1,319 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage{multirow} % para las tablas
+\usepackage[flushleft]{threeparttable}
+\usepackage{verbatim}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[]{General Game Playing} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\subtitle{Representing and Reasoning About the Rules of General Games With Imperfect Information\footnote{Escrito por Stephan Schieffel y Michael Thielscher}}
+\author[]{\scriptsize Aldana Ramirez, Jeremías Rodríguez, Sebastián Meli} % Your name
+\institute[UNR] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+\small Introducción a la Inteligencia Artificial\\
+Universidad Nacional de Rosario % Your institution for the title page
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Conceptos de IA involucrados}
+\begin{itemize}
+\item Knowleadge
+\item Learning
+\item Reasoning
+\item Planning
+\item Decision Making
+\item Logic Programming
+\item Situation Calculus
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{General Game Playing}
+\begin{block}{General Game Playing (GGP)}
+Es un sistema que aprende a jugar juegos previamente desconocidos, sin intervención humana, solo a partir de sus reglas.
+\end{block}
+
+\begin{block}{¿Cómo representamos las reglas?}
+Se ha desarrollado un lenguaje de alto nivel llamado Game Description Language (GDL) que permite describir cualquier juego con un número finito de jugadores y movimientos legales en cada estado. \\
+Los movimientos son determísticos y completamente observables, y todas las reglas del juego son conocidas por todos los jugadores (información completa). \\
+Las reglas son fáciles de entender y mantener, y la semántica es precisa y totalmente procesable por una máquina.\\
+Ejemplos: Ajedrez, Go.
+\end{block}
+
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Game Description Language with Imperfect Information}
+
+Este paper propone una extensión al lenguaje GDL para incluir aleatoriedad y conocimiento incompleto del estado del juego, llamado Game Description Language with Imperfect Information (GDL-II). \\
+Permite describir juegos con:
+
+\begin{itemize}
+\item {Un número finito de jugadores que conocen todas las reglas de juego pero pueden tener información {\bf incompleta o asimétrica}.}
+\item {Un número finito de movimientos legales que pueden ser \bf{no determinísticos}.}
+\end{itemize}
+
+Ejemplos: Poker, Bridge, Backgammon 
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{GDL-II - Sintaxis}
+
+La sintaxis de GDL-II está basada en la sintaxis estándar de los programas lógicos (incluyendo negación).\\
+Una descripción de un juego es un conjunto finito de sentencias lógicas usando los predicados de la tabla 1, donde se imponen ciertas restricciones. 
+
+\begin{center}
+\begin{table}\scriptsize
+\begin{tabular}{|l|l|}
+\hline
+role(R) & R es un jugador. \\
+init(F) & F vale en la posición inicial. \\ \hline
+true(F) & F vale en la posición actual. \\ 
+legal(R,M) & El jugador R puede hacer el movimiento M en la posición actual. \\ 
+does(R,M) & El jugador R hace el movimiento M. \\ 
+next(F) & F vale en la posición siguiente. \\ \hline
+terminal & La posición actual es terminal. \\
+goal(R,V) & El jugador R gana V puntos en la posición actual. \\ \hline \hline
+sees(R,P) & El jugador R percive P en la siguiente posición. \\
+random &  El jugador aleatorio.\footnote{Notar que no necesariamente es un jugador convencional.} \\ \hline
+\end{tabular}
+\label{tabla:sencilla}
+\end{table}
+\end{center}
+
+\vspace{-20pt}
+
+\begin{center}
+\scriptsize Tabla 1: GDL-II keywords
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Ejemplo: Krieg-Tic Tac Toe\footnote{Variante del clásico Tic Tac Toe donde los jugadores no pueden percibir los movimientos de su oponente}}
+\begin{block}{Especificando las reglas en GDL-II}
+\scriptsize \begin{verbatim}
+1  role(xplayer).
+2  role(oplayer).
+3
+4  init(control(xplayer)).
+5  init(cell(1,1,b)). init(cell(1,2,b)). init(cell(1,3,b)).
+6  init(cell(2,1,b)). init(cell(2,2,b)). init(cell(2,3,b)).
+7  init(cell(3,1,b)). init(cell(3,2,b)). init(cell(3,3,b)).
+8
+9  legal(xplayer,mark(M,N)) :- true(control(xplayer)), true(cell(M,N,Z)),
+10                             distinct(Z,x), not true(tried(xplayer,M,N)).
+11 legal(oplayer,mark(M,N)) :- true(control(oplayer)), true(cell(M,N,Z)),
+12                             distinct(Z,o), not true(tried(oplayer,M,N)).
+13 legal(xplayer,noop)      :- true(control(oplayer)).
+14 legal(oplayer,noop)      :- true(control(xplayer)).
+\end{verbatim} 
+\end{block}
+\small {
+Líneas 1-7  : Se establecen los dos roles y las posiciones iniciales.\\
+Líneas 9-14 : Se especifican los movimientos }
+
+\end{frame}
+
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{Ejemplo (continuación)}
+\begin{block} {  }
+\scriptsize \begin{verbatim}
+16 validmove              :- does(R,mark(M,N)), true(cell(M,N,b)).
+17
+18 next(F)                :- not validmove, true(F).
+19 next(tried(R,M,N))     :- not validmove, does(R,mark(M,N)).
+20
+21 next(cell(M,N,x))      :- validmove, does(xplayer,mark(M,N)).
+22 next(cell(M,N,o))      :- validmove, does(oplayer,mark(M,N)).
+23 next(cell(M,N,Z))      :- validmove, true(cell(M,N,Z)),
+24                                      does(R,mark(I,J)), distinct(M,I).
+25 next(cell(M,N,Z))      :- validmove, true(cell(M,N,Z)),
+26                                      does(R,mark(I,J)), distinct(N,J).
+27 next(control(oplayer)) :- validmove, true(control(xplayer)).
+28 next(control(xplayer)) :- validmove, true(control(oplayer)).
+29 next(tried(R,M,N))     :- validmove, true(tried(R,M,N)).
+30
+31 sees(R, yourmove)      :- not validmove, true(control(R)).
+32 sees(xplayer,yourmove) :- validmove, true(control(oplayer)).
+33 sees(oplayer,yourmove) :- validmove, true(control(xplayer)).
+\end{verbatim} 
+\end{block}
+\small{
+Líneas 18-29 : Se especifica cómo se actualizarán las posiciones.  \\
+Líneas 31-33 : Se notificará a cada jugador cuando sea su turno. \\
+Omitimos las condiciones de terminación y puntuación.
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{GDL-II - Semántica}
+
+Sea G una descripción válida para un juego en GDL-II.\\ 
+Se obtiene un único modelo para G utilizando el concepto de {\bf modelo estable}.\footnote{El concepto de modelo estable fue introducido por M. Gelfond y V. Lifschitz en su paper {\it The Stable Model Semantics for Logic Programming} para proveer una semántica para programas lógicos con negación.}\\
+\vspace{10pt}
+La semántica de G está dada por un sistema de transición de estados, construído a partir del modelo estable.
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Razonando sobre GDL-II}
+
+\begin{block}{Situation Calculus}
+Para construir sistemas que sean capaces de razonar con información imperfecta, se utiliza una extensión de {\bf Situation Calculus (SC)}, que permite representar el conocimiento de los agentes.\\
+
+\vspace{10pt}
+SC es una lógica de predicados creada por McCarthy diseñada para formalizar y automatizar razonamientos y acciones. Tiene elementos predefinidos que permiten:
+
+\begin{itemize}
+\item Indicar la situación inicial.
+\item Decir que algo es cierto en determianda situación.
+\item Decir que una acción es posible en una situación.
+\end{itemize}
+
+\end{block}
+
+\begin{block}{¿Cómo razonar a partir de GDL-II?}
+Se utiliza una función que mapea elementos de GDL-II en elementos de esta extensión de SC. 
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Autores y Trabajos Relacionados}
+
+Este paper fue escrito en 2014 por Stephan Schiffel (Reikjavík University, Islandia) y Michael Thielscher (The University of New South Wales, Australia).\\
+Actualmente continúan investigando en el área.\\
+\vspace{10pt}
+Anualmente la AAAI (Association for the Advancement of Artificial Inteligence) organiza la International General Game Playing Competition, en la que participan equipos de investigación de distintos lugares del mundo.\\
+\vspace{10pt}
+Se realiza investigación en este área en países como Estados Unidos, Alemania y Australia.
+ 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{References}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[Smith, 2012]{p1} Stephan Schieffel, Michael Thielscher (2014)
+\newblock Representing and Reasoning About the Rules of General Games With Imperfect Information
+\newblock \emph{Journal of Artificial Intelligence Research} 171 -- 206
+\end{thebibliography}
+}
+\end{frame}
+% http://www.cse.unsw.edu.au/~cs4415/2010/resources/stable.pdf
+
+\end{document} 

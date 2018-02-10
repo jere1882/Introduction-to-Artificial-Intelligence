@@ -1,0 +1,233 @@
+\documentclass {article} 
+
+\usepackage{lmodern}
+\usepackage [spanish] {babel} 
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{amsthm} % para poder usar newtheorem
+\usepackage{cancel} %Para poder hacer el simbolo "no es consecuencia semántica" etc.
+\usepackage{graphicx} 
+\usepackage{amsmath} %para poder usar mathbb
+\usepackage{amsfonts} %sigo intentando usar mathbb
+\usepackage{amssymb} %therefore
+\usepackage{ mathabx } %comillas
+\usepackage{ verbatim } 
+\addto\captionsspanish{   %
+\def\bibname{Referencias} 
+\def\tablename{Cuadro}    
+}
+
+\theoremstyle{remark}
+\newtheorem{thm}{Teorema}
+\newtheorem{lem}{Lema}[section]
+\newtheorem{cor}{Corolario}[section]
+\newtheorem{deff}{Definición}[section]
+\newtheorem{obs}{Observación}[section]
+\newtheorem{ej}{Ejercicio}[section]
+\newtheorem{ex}{Ejemplo}[section]
+\newtheorem{alg}{Algoritmo}[section]
+\usepackage[latin1]{inputenc} 
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{proof}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{3cm}{3cm}
+
+
+
+\begin{document} 
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\Large Facultad de Ciencias Exactas, Ingeniería y Agrimensura}\\[1.5cm] % Name of your university/college
+\textsc{\Large Trabajo Práctico 3 }\\[0.5cm] % Major heading such as course name
+\textsc{\large Introducción a la Inteligencia Artificial}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Ontología: Fútbol Argentino}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Autor:}\\
+%Rodríguez Jeremías % Your name
+%\end{flushleft}
+%\end{minipage}
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Profesor:} \\
+%Mauro Jaskelioff % Supervisor's Name
+%\end{flushright}
+%\end{minipage}\\[4cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+\Large \emph{Biasín Franco, Rodríguez Jeremías, Meli Sebastián}\\
+
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\thispagestyle{empty}
+\cleardoublepage
+\tableofcontents
+\thispagestyle{empty}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\newpage
+
+
+\section{Introducción}
+
+\par En este trabajo, mostramos una ontología sobre los equipos de fútbol de Argentina. Esta ontología consta de 4 clases (Instalación, Indumentaria, Equipo, Persona). Cada una de estas clases, a su vez, tiene subclases. Por ejemplo, dentro de Equipo, tenemos PrimeraDivisión y SegundaDivisión como subclases.
+
+		\begin{center}
+		\includegraphics[scale=0.6]{grafo.eps}
+		\end{center}
+		
+\par Dentro de cada subclase, a su vez, tenemos individuos. Algunos ejemplos de ésto son:
+\begin{enumerate}
+	\item Dentro de la clase Instalación, y la subclase Estadio (donde se encuentran los estadios de los equipos), tenemos el individuo Estadio\_Marcelo\_Bielsa
+	\item  Dentro de la clase Indumentaria está la subclase Uniforme. En Uniforme tenemos más subclases, por ejemplo, Camiseta. Algunos de los individuos en Camiseta son BJ\_Camiseta, NOB\_Camiseta, entre otros.
+	\item En la clase Persona, se encuentra la subclase Jugador. En esta subclase están algunos de los jugadores de los equipos en Equipos. Unos ejemplos de estos jugadores son: Ignacio\_Scocco, Lucas\_Boyé
+\end{enumerate}
+
+\section{Relaciones}
+También consideramos algunas relaciones entre las clases. Estas se encuentran detalladas en esta tabla: 
+\begin{verbatim}
+Clase Dominio                           Clase Rango                     Relación
+Directivo                               Equipo                          Preside
+Equipo                                  Directivo                       EsPresididaPor
+Técnico                                 Equipo                          EntrenaA
+Equipo                                  Campo_Entrenamiento             EntrenanEn
+Jugador                                 Equipo                          Forman
+Jugador                                 Indumentaria                    Viste
+Equipo                                  Estadio                         DisputaPartidosLocalEn
+Jugador                                 Equipo or Estadio               DebutoEn
+Equipo                                  Jugador                         EstaFormadoPor
+\end{verbatim}
+
+Algunos comentarios sobre estas relaciones:
+
+\begin{itemize}
+	\item DebutoEn: Es una relación de tipo no funcional. Ésto se debe a que en el rango tenemos un OR (entonces, dado un jugador, tenemos 2 valores asociados). 
+	\item DisputaPartidosLocalEn : Es de tipo funcional, pues todos los partidos como local se disputan en el mismo estadio.
+	\item EntrenaA: Es de tipo funcional, ya que un director técnico dirige sólo a un equipo. 
+	\item EntrenanEn: No es funcional, pues un equipo no tiene porqué entrenar en el mismo lugar siempre.
+	\item EsPresididaPor: Es funcional. Asumimos que un equipo tiene sólo un director. Es la función inversa de "`Preside"'
+	\item EstaFormadoPor: No funcional ya que un equipo está formado por varios jugadores. Esta relación es la inversa de "`Forman"'
+	\item Forman: Es una relación funcional, dado que un jugador sólo puede formar parte de un equipo. Esta función es la inversa de "`EstaFormadoPor"'
+	\item Preside: Es una relación funcional. Un directivo solamente puede ser presidente de un equipo. Es la función inversa de "`EsPresididaPor"'
+	\item Viste: Es no funcional, pues un jugador no tiene porqué usar sólo una indumentaria
+\end{itemize}
+
+\section{Data Propierties}
+
+También contemplamos algunas propiedades de cada clase. Éstas se pueden ver en la siguiente tabla: 
+
+\begin{verbatim}
+Propiedad                                       Clase Dominio                      Tipo de dato
+Apertura                                        Estadio                            Integer
+Estatura                                        Jugador                            Integer
+Goles                                           Jugador                            Integer
+Posición_Ultima_liga                            Equipo                             Integer
+Marca                                           Indumentaria                       String
+Nombre                                          Jugador                            String
+Titulo_Ganados                                  Equipo                             Integer
+Nombre_Completo                                 Persona, Estadio                   String
+Capacidad                                       Estadio                            Integer
+Partidos_Internacionales                        Jugador                            Integer
+Apodo                                           Jugador, Equipo                    String
+Colores                                         Medias, Camisetas, Pantalón        String
+Año_debut                                       Jugador                            Integer
+\end{verbatim}
+
+Supongamos, por ejemplo, el Equipo de PrimeraDivisión Boca\_Juniors, un Jugador (Agustín\_Orión) de este Equipo y su Estadio (Estado\_Alberto\_José\_Armando).
+Este equipo tiene sus propiedades asociadas por pertenecer a la clase Equipo, y también cumple las relaciones de esta clase. Lo mismo sucede con el jugador y el estadio.
+
+Unos ejemplos:
+\begin{enumerate}
+	\item Boca\_Juniors EstaFormadoPor Agustín\_Orión
+	\item Boca\_Juniors DisputaPartidosLocalEn Estado\_Alberto\_José\_Armando
+	\item Agustín\_Orión Forman Boca\_Juniors    (aquí vemos la existencia de la inversa)
+	\item Agustín\_Orión Estatura 187
+	\item Estado\_Alberto\_José\_Armando Capacidad 32000
+\end{enumerate}
+
+		\begin{center}
+		\includegraphics[scale=0.6]{Foto1.eps}
+		\end{center}
+
+		\begin{center}
+		\includegraphics[scale=0.65]{Foto2.eps}
+		\end{center}
+
+También podemos ver lo mismo aquí, con el Jugador Ignacio\_Scocco
+
+		\begin{center}
+		\includegraphics[scale=0.6]{Foto3.eps}
+		\end{center}
+
+\section{Queries}
+Finalmente, agregamos los resultados de las queries solicitadas en el enunciado.\\
+
+\begin{enumerate}
+	\item ¿Existe un equipo que tenga camiseta negra?\\
+\par Dado que los individuos de la clase Uniforme no necesariamente tienen que pertenecer a un equipo,
+forzamos el hecho de que algún jugador de algún equipo lo vista:
+\begin{center}
+\textbf{	EstaFormadoPor some (Jugador and (Viste some (Uniforme and Colores value "Negro")))}
+\end{center}
+
+    Salida: Newells, Chacarita, Almagro.
+		
+	\item ¿Cuales equipos ganaron más de dos campeonatos?\\
+	\begin{center}
+\textbf{	TitulosGanados some integer[>=2]}
+\end{center}
+
+    Salida: River, Racing, Newells, Boca, Central.
+\end{enumerate}
+
+\section{Aclaraciones}
+
+Versión utilizada: Protégé 4.3\\
+
+Archivos:\\
+
+\par \textbf{TP3.owl}     : La ontología con los requisitos especificados en el enunciados del TP y algunas propiedades e individuos adicionales que agregamos.\\
+\par \textbf{grafo.jpeg}  : La representación generada por OWL-Viz
+
+
+\end{document}

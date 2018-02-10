@@ -1,0 +1,1272 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <Prefix name="" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="Ontology1463552761562" IRI="http://www.semanticweb.org/jere/ontologies/2016/4/Ontology1463552761562.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">TP 3 - IAA
+Fútbol Argentino</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:CampoDeEntrenamiento"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Entrenamiento"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Medias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Pantalón"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AnteriormenteFormo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DebutoEn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenanEn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#Inauguracion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apertura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Marca"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PartidosInternacionales"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Mario_Osella"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Medina_de_Almagro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Estadio_Marcelo_Bielsa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fernando_Coniglio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#RV_Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Almagro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Unidos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Casa_Amarilla_training_ground"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Chacarita"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Angelici"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Estadio_Alberto_José_Armando"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Gimnasia_de_Jujuy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Guillermo_Barros_Schelotto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Talleres_de_Córdoba"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:CampoDeEntrenamiento"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Entrenamiento"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Medias"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Pantalón"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Medias"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Pantalón"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:CampoDeEntrenamiento"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:Entrenamiento"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Uniforme"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Mario_Osella"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Medina_de_Almagro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Estadio_Marcelo_Bielsa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fernando_Coniglio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#RV_Camiseta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Almagro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Unidos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:CampoDeEntrenamiento"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Casa_Amarilla_training_ground"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Chacarita"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Angelici"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Estadio_Alberto_José_Armando"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Gimnasia_de_Jujuy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Guillermo_Barros_Schelotto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:PrimeraDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1463552761562:SegundaDivisión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Talleres_de_Córdoba"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Mario_Osella"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Medina_de_Almagro"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Almagro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Medina_de_Almagro"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fernando_Coniglio"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Chacarita"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Fernando_Coniglio"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AnteriormenteFormo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Estadio_Alberto_José_Armando"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenanEn"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Casa_Amarilla_training_ground"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Angelici"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Angelici"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Guillermo_Barros_Schelotto"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Estadio_Marcelo_Bielsa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Negro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Azul</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#ALMAGRO_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Amarillo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#BJ_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Azul</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Rojo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#CHACARITA_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Negro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Diego_Mario_Osella"/>
+        <Literal datatypeIRI="&xsd;string">Diego Mario Francisco Osella </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#Inauguracion"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Estadio_Marcelo_Bielsa"/>
+        <Literal datatypeIRI="&xsd;integer">1911</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Estadio_Marcelo_Bielsa"/>
+        <Literal datatypeIRI="&xsd;integer">42000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <Literal datatypeIRI="&xsd;string">Mortero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <Literal datatypeIRI="&xsd;integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <Literal datatypeIRI="&xsd;integer">181</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <Literal datatypeIRI="&xsd;integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Lucas_Boyé"/>
+        <Literal datatypeIRI="&xsd;string">Lucas Ariel Boyé</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <Literal datatypeIRI="&xsd;string">La Fiera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <Literal datatypeIRI="&xsd;integer">1999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <Literal datatypeIRI="&xsd;integer">173</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <Literal datatypeIRI="&xsd;integer">141</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez"/>
+        <Literal datatypeIRI="&xsd;string">Maximiliano Rubén Rodríguez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#RV_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Blanco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#RV_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Rojo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <Literal datatypeIRI="&xsd;integer">2003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <Literal datatypeIRI="&xsd;integer">187</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <Literal datatypeIRI="&xsd;string">Agustín Orion</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Agustín_Orión"/>
+        <Literal datatypeIRI="&xsd;string">Agustín Ignacio Orión</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Almagro"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <Literal datatypeIRI="&xsd;integer">1905</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <Literal datatypeIRI="&xsd;string">Xeneixe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Juniors"/>
+        <Literal datatypeIRI="&xsd;integer">61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Boca_Unidos"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Chacarita"/>
+        <Literal datatypeIRI="&xsd;string">Funebrero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Chacarita"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Angelici"/>
+        <Literal datatypeIRI="&xsd;string">Daniel Angelici</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <Literal datatypeIRI="&xsd;integer">182</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <Literal datatypeIRI="&xsd;integer">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <Literal datatypeIRI="&xsd;string">Daniel Díaz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Daniel_Díaz"/>
+        <Literal datatypeIRI="&xsd;string">Daniel Alberto Díaz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Estadio_Alberto_José_Armando"/>
+        <Literal datatypeIRI="&xsd;integer">32000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Gimnasia_de_Jujuy"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;string">Nacho</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;integer">2003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;integer">176</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;integer">132</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;string">Ignacio Scocco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Ignacio_Scocco"/>
+        <Literal datatypeIRI="&xsd;string">Ignacio Martín Scocco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Negro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:NOB_Camiseta"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Rojo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <Literal datatypeIRI="&xsd;integer">1903</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <Literal datatypeIRI="&xsd;string">leprosos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <Literal datatypeIRI="&xsd;integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Newells_Old_Boys"/>
+        <Literal datatypeIRI="&xsd;integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+        <Literal datatypeIRI="&xsd;integer">1903</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+        <Literal datatypeIRI="&xsd;string">La academia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+        <Literal datatypeIRI="&xsd;integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Racing_Club"/>
+        <Literal datatypeIRI="&xsd;integer">31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+        <Literal datatypeIRI="&xsd;integer">1901</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+        <Literal datatypeIRI="&xsd;string">Gallinas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+        <Literal datatypeIRI="&xsd;integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:River_Plate"/>
+        <Literal datatypeIRI="&xsd;integer">53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+        <Literal datatypeIRI="&xsd;integer">1906</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+        <Literal datatypeIRI="&xsd;string">Canallas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+        <Literal datatypeIRI="&xsd;integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Rosario_Central"/>
+        <Literal datatypeIRI="&xsd;integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <NamedIndividual abbreviatedIRI="Ontology1463552761562:Talleres_de_Córdoba"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AnteriormenteFormo"/>
+        <ObjectProperty IRI="topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AnteriormenteFormo"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DebutoEn"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Técnico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenanEn"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AnteriormenteFormo"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DebutoEn"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+            <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:DisputaPartidosLocalEn"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenaA"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EntrenanEn"/>
+        <Class abbreviatedIRI="Ontology1463552761562:CampoDeEntrenamiento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EsPresididaPor"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Directivo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:EstaFormadoPor"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Forman"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Preside"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Ontology1463552761562:Viste"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#Inauguracion"/>
+        <DataProperty IRI="topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PartidosInternacionales"/>
+        <DataProperty IRI="topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apertura"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Marca"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PartidosInternacionales"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#Inauguracion"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Instalación"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apertura"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+            <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="Ontology1463552761562:Camiseta"/>
+            <Class abbreviatedIRI="Ontology1463552761562:Medias"/>
+            <Class abbreviatedIRI="Ontology1463552761562:Pantalón"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Marca"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Indumentaria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="Ontology1463552761562:Estadio"/>
+            <Class abbreviatedIRI="Ontology1463552761562:Persona"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PartidosInternacionales"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Jugador"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <Class abbreviatedIRI="Ontology1463552761562:Equipo"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#AñoFundación"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.co-ode.org/ontologies/ont.owl#Inauguracion"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apertura"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Apodo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:AñoDebut"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Capacidad"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Colores"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Estatura"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Goles"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Marca"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:Nombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:NombreCompleto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PartidosInternacionales"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:PosicionUltimaLiga"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Ontology1463552761562:TitulosGanados"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Maximiliano_Rodríguez</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0 idea de fútbol, datos sacados de acá:
+
+https://es.wikipedia.org/wiki/Club_Atl%C3%A9tico_Newell%27s_Old_Boys#Jugadores</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:Almagro</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Toda la info basada en wikipedia.com
+
+Tabla de títulos basada en: http://www.infobae.com/2016/02/11/1749858-asi-quedo-la-tabla-historica-titulos-el-futbol-argentino-la-supercopa-san-lorenzo
+
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:Apodo</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">No es funcional. Un jugador puede tener varios apodos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:Colores</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">No es funcional. Una indumentaria puede ser de varios colores.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:DisputaPartidosLocalEn</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Funcional. Todos los partidos como local se disputan en el mismo estadio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:EntrenaA</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Funcional. Un técnico sólo dirige a un sólo equipo. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:EntrenanEn</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">No funcional. Un equpo puede entrenar en distintos lugares.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:EsPresididaPor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Funcional. Asumimos que un equipo tiene un solo director.
+Inversa de &quot;preside&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:EstaFormadoPor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">No funcional. Un equipo esta formado por varios jugadores.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Ontology1463552761562:Preside</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Funcional: un directivo preside a lo sumo un club.
+Invesa de &quot;es presidida por&quot;</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
