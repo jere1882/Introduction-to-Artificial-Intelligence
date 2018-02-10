@@ -1,0 +1,23 @@
+Rodríguez Jeremías
+Meli Sebastián
+
+La heurística que elegimos consiste en hallar la distancia de Manhattan desde Pacman hasta todas
+las pastillas restantes. De estas distancias elegir la menor. Luego suponer que no habrá obstáculos
+y pacman irá en linea recta, recolectando las pastillas restantes.
+
+d/ La heurística (h) que elegimos es admisible (i.e. no sobreestima para todo estado).
+
+Sea el estado e tq (x,y) es la posicion de Pacman y sea n el número de pastillas restantes en el mapa. Analizamos por casos en n:
+
+> n<2 => h(e) es la distancia de manhattan entre la pastilla y pacman, que como sabemos es admisible.
+> n=2:  Quedan dos pastillas.
+	i. Pacman tendrá que moverse hacia una de las pastillas. El costo será mayor o igual que la distancia de manhattan hasta esa pastilla.
+	ii. Luego tendrá que ir a la pastilla que falta. El costo de este último tramo será mayor o igual que la distancia en línea recta*.
+	Luego, nuestro valor de h  (la suma de i y ii) no sobreestima.
+> n=3:  Quedan tres pastillas. 
+	Pacman tendrá que moverse hacia una de las pastillas. Este valor será mayor o igual que la distancia de manhattan hasta esa pastilla.
+	El resto del camino unirá las tres pastillas restantes. En el mejor de los casos, este camino será en forma de L por el borde.
+	Por lo tanto, nuestro valor de h no sobreestima.
+> n=4:  Análogo.
+
+*) La distancia en línea recta entre dos pastillas se determina por el ancho y alto del mapa.

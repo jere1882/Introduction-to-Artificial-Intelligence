@@ -1,0 +1,26 @@
+Recuerden que un nodo búsqueda debe contener no solo un estado sino también la información necesaria para reconstruir el path que lo llevó al estado dado.
+
+
+P! Make sure to implement a graph search algorithm??
+
+(CUESTIÓN 1 y 2)
+Está perfecto, testee todo los ejemplos y te dice q lo hagas con un stack.
+Está bueno también el tema de los colores en el mapa y entender xq hace ese camino, qué realmente hicimos.
+Comparar usando bfs y dfs! es maravilloso.
+
+P! El eightpuzzle parece q hace lo q tiene q hacer.
+
+
+
+(CUESTIÓN 3)
+
+En el enuniado dice que la función de costo ya viene metida dentro de cada laberinto, osea q lo q nosotros hacíamos
+(asumir q el costo es la longitud del camino q ya hiciste) está mal!
+
+P! Se deberían ver caminos de costos muy altos y muy bajos para el StayEastSearchAgent y StayWestSearchAgent respectivamente debido a su función de costo exponencial
+
+VIP: Crear nuestros propiso puzzles!
+
+(CUESTIÓN 4)
+
+Dice algo de 549, no nos dio eso, esta bien?

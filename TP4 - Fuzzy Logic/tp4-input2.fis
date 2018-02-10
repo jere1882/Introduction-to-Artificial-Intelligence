@@ -1,0 +1,59 @@
+[System]
+Name='input2'
+Ninputs=2
+Noutputs=1
+Nrules=12
+Nexceptions=0
+Conjunction='min'
+MissingValues='random'
+
+[Input1]
+Active='yes'
+Name='Epoca'
+Range=[       0.000 ,      12.000 ]
+NMFs=5
+MF1='Otoño','trapezoidal',[       3.500 ,       4.500 ,       6.500 ,       7.500 ]
+MF2='Invierno','trapezoidal',[       6.500 ,       7.500 ,       9.500 ,      10.500 ]
+MF3='Primavera1','trapezoidal',[       9.500 ,      10.500 ,      12.000 ,      12.000 ]
+MF4='Verano','trapezoidal',[       0.500 ,       1.500 ,       3.500 ,       4.500 ]
+MF5='Primavera2','SemiTrapezoidalInf',[       0.000 ,       0.500 ,       1.500 ]
+
+[Input2]
+Active='yes'
+Name='Precipitaciones'
+Range=[       0.000 ,       1.000 ]
+NMFs=4
+MF1='NulasP','SemiTrapezoidalInf',[       0.000 ,       0.100 ,       0.200 ]
+MF2='BajasP','trapezoidal',[       0.100 ,       0.200 ,       0.400 ,       0.500 ]
+MF3='ModeradasP','trapezoidal',[       0.400 ,       0.500 ,       0.700 ,       0.800 ]
+MF4='AltasP','SemiTrapezoidalSup',[       0.700 ,       0.800 ,       1.000 ]
+
+[Output1]
+Nature='fuzzy'
+Defuzzification='area'
+Disjunction='sum'
+DefaultValue=       0.000 
+Classif='no' 
+Active='yes'
+Name='Conveniencia'
+Range=[       0.000 ,       1.000 ]
+NMFs=3
+MF1='Media','trapezoidal',[       0.200 ,       0.300 ,       0.600 ,       0.700 ]
+MF2='Alta','SemiTrapezoidalSup',[       0.600 ,       0.800 ,       1.306 ]
+MF3='Nula','SemiTrapezoidalInf',[       0.000 ,       0.100 ,       0.300 ]
+
+[Rules]
+1, 0,        3.000 ,
+2, 0,        3.000 ,
+3, 1,        1.000 ,
+5, 1,        1.000 ,
+4, 1,        2.000 ,
+4, 2,        2.000 ,
+4, 3,        1.000 ,
+3, 2,        1.000 ,
+5, 2,        1.000 ,
+3, 3,        3.000 ,
+5, 3,        3.000 ,
+0, 4,        3.000 ,
+
+[Exceptions]

@@ -1,0 +1,15 @@
+Después de renegar una hora y pico, resumo como se hace andar esto en windows:
+
+previas:
+la consola de ubuntu se abre como buscando cmd en el menu inicio
+los comandos para moverse de carpeta son los mismos pero dir reemplaza a ls.
+
+
+para instalar python (el intérprete) googlee y baje un .exe, osea version para windows, en la página oficial.
+
+se me creo la carpeta en C:/Python27
+
+ahí adentro hay dos ejecutables. si abrís python.exe entras en modo interactivo.
+tenés que tener todo lo q quieras importar o abrir metido en esa carpeta horrenda.
+
+podes poner python pacman.py y arranca el game.

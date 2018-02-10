@@ -1,0 +1,28 @@
+\frametitle{Ejemplo (continuación)}
+\begin{block} {  }
+\scriptsize \begin{verbatim}
+16 validmove              :- does(R,mark(M,N)), true(cell(M,N,b)).
+17
+18 next(F)                :- not validmove, true(F).
+19 next(tried(R,M,N))     :- not validmove, does(R,mark(M,N)).
+20
+21 next(cell(M,N,x))      :- validmove, does(xplayer,mark(M,N)).
+22 next(cell(M,N,o))      :- validmove, does(oplayer,mark(M,N)).
+23 next(cell(M,N,Z))      :- validmove, true(cell(M,N,Z)),
+24                                      does(R,mark(I,J)), distinct(M,I).
+25 next(cell(M,N,Z))      :- validmove, true(cell(M,N,Z)),
+26                                      does(R,mark(I,J)), distinct(N,J).
+27 next(control(oplayer)) :- validmove, true(control(xplayer)).
+28 next(control(xplayer)) :- validmove, true(control(oplayer)).
+29 next(tried(R,M,N))     :- validmove, true(tried(R,M,N)).
+30
+31 sees(R, yourmove)      :- not validmove, true(control(R)).
+32 sees(xplayer,yourmove) :- validmove, true(control(oplayer)).
+33 sees(oplayer,yourmove) :- validmove, true(control(xplayer)).
+\end{verbatim}
+\end{block}
+\small{
+Líneas 18-29 : Se especifica cómo se actualizarán las posiciones.  \\
+Líneas 31-33 : Se notificará a cada jugador cuando sea su turno. \\
+Omitimos las condiciones de terminación y puntuación.
+}

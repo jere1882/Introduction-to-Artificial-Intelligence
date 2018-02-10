@@ -1,0 +1,238 @@
+\documentclass {article} 
+
+\usepackage{lmodern}
+\usepackage [spanish] {babel} 
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{amsthm} % para poder usar newtheorem
+\usepackage{cancel} %Para poder hacer el simbolo "no es consecuencia semántica" etc.
+\usepackage{graphicx} 
+\usepackage{amsmath} %para poder usar mathbb
+\usepackage{amsfonts} %sigo intentando usar mathbb
+\usepackage{amssymb} %therefore
+\usepackage{ mathabx } %comillas
+\usepackage{ verbatim } 
+\addto\captionsspanish{   %
+\def\bibname{Referencias} 
+\def\tablename{Cuadro}    
+}
+
+\theoremstyle{remark}
+\newtheorem{thm}{Teorema}
+\newtheorem{lem}{Lema}[section]
+\newtheorem{cor}{Corolario}[section]
+\newtheorem{deff}{Definición}[section]
+\newtheorem{obs}{Observación}[section]
+\newtheorem{ej}{Ejercicio}[section]
+\newtheorem{ex}{Ejemplo}[section]
+\newtheorem{alg}{Algoritmo}[section]
+\usepackage[latin1]{inputenc} 
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{proof}
+\usepackage{anysize}
+\marginsize{2.5cm}{2.5cm}{3cm}{3cm}
+
+
+
+\begin{document} 
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\Large Facultad de Ciencias Exactas, Ingeniería y Agrimensura}\\[1.5cm] % Name of your university/college
+\textsc{\Large Trabajo Práctico 4 }\\[0.5cm] % Major heading such as course name
+\textsc{\large Introducción a la Inteligencia Artificial}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries PREDICCIONES AGROPECUARIAS UTILIZANDO LÓGICA BORROSA}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Autor:}\\
+%Rodríguez Jeremías % Your name
+%\end{flushleft}
+%\end{minipage}
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Profesor:} \\
+%Mauro Jaskelioff % Supervisor's Name
+%\end{flushright}
+%\end{minipage}\\[4cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+\Large \emph{Biasín Franco, Rodríguez Jeremías, Meli Sebastián}\\
+
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\thispagestyle{empty}
+\cleardoublepage
+\tableofcontents
+\thispagestyle{empty}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\newpage
+
+
+\section{Motivación}
+
+\par Nuestro trabajo está inspirado en los conocimientos y reglas empíricas que utilizaron los productores agropecuarios del sur de nuestra provincia, a mediados del siglo pasado, para determinar la conveniencia de comenzar el sembrado un determinado cultivo en un momento dado (fecha).
+\par En particular, la abuela de uno de los integrantes de este trabajo vive en el campo desde hace más de 70 años; y nos asesoró sobre los criterios que se tenían a la hora de tomar decisiones en una época donde la mayoría de las familias agropecuarias no tenían acceso ni a una radio (menos aún a algún tipo de predicción meteorológica).
+\par Dado que las reglas manejadas son del estilo "`si la presión es baja y es verano entonces hay probabilidad alta de lluvia"', consideramos que la lógica difusa es especialmente adecuada para formalizar estas imprecisiones.
+\par Concretamente nos centramos en el sembrado de soja, aunque las variables podrían reutilizarse con reglas similares para otros cultivos como maíz o trigo.
+
+\section{Primera Etapa: Infiriendo riesgo de precipitaciones}
+
+\par En un primer nivel, nuestras variables imput y conjuntos borrosos son los siguientes:
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{variables1.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+\par Algunas aclaraciones:
+\begin{itemize}
+	\item En la variable fecha, FisPro no nos permitió crear un solo fuzzy set para primavera, por lo que lo dividimos en dos y duplicamos cada regla donde se involucraba primavera.
+	\item Misma aclaración para el sentido de los vientos.
+\end{itemize}
+
+\par En este primer nivel, nuestra variable output es:
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{variableo.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+\par Las reglas de inferencia son:
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{rules1.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+\section{Segunda Etapa: Infiriendo conveniencia de sembrar soja}
+
+\par A la hora de decidir si conviene sembrar soja en un momento particular, debemos tener en cuenta:
+
+\begin{itemize}
+	\item Precipitaciones: Si se siembra y luego llueve inmediatamente, las semillas se echan a perder; o se debe interrumpir el sembrado a la mitad. De aquí la importancia de saber si va a llover en el corto plazo a la hora de decidirse a comenzar.
+	\item Época del Año: Cada cultivo tiene una estación adecuada para crecer (por cuestiones climáticas de cada estación). La soja se suele sembrar en verano, aunque puede sembrarse a partir de fines de octubre. Si la estación no es adecuada, debería considerarse otro cultivo (El maíz se siembra en primavera o principios del invierno, incluso tal vez en principios de octubre y el trigo  en otoño). 
+\end{itemize}
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{variables2.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+\par Algunas aclaraciones:
+\begin{itemize}
+	\item El valor crisp obtenido de la etapa 1 será reutilizado como entrada de Riesgo de Precipitaciones.
+	\item Se vuelve a considerar la variable fecha pero en esta etapa con un sentido distinto. En la primera etapa considerábamos que estar en una estación en particular influenciaba la probabilidad de lluvias (e.g, en verano llueve mucho). En esta etapa consideramos la evolución del clima en general durante esa estación.
+\end{itemize}
+
+\par La variable output final es:
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{variableo2.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+\par Y las reglas en esta última etapa son:
+
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.65]{rules2.eps}
+\end{figure}
+\end{center}
+
+\newpage
+\section{Ejemplos de Uso}
+\subsection{Ejemplo 1}
+Consideremos el día de hoy: Jueves 16 de junio. La pregunta es, ¿Conviene sembrar soja hoy?.\\
+Los valores de entrada (correspondientes al día de hoy) son: 
+
+Temperatura (promedio): 12°C \\
+Presión: 1026 hPa \\
+Fecha: Fines de Junio (que se corresponde a fines de otoño) = aprox 7.2 en nuestra escala \\
+Dirección del viento: Mayormente sur, levemente sudoeste = aporx 2.6 en nuestra escala \\
+
+Obtenemos como salida el siguiente valor crisp:\\
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.65]{infer1.eps}
+\end{centering}
+\end{figure}
+\end{center}
+
+Es decir, no tenemos una gran convicción de que en un futuro inmediato llueva.\\
+Ingresando este valor en la segunda etapa, junto con el mismo valor de fecha:
+
+
+\begin{center}
+\includegraphics[scale=0.65]{infer2.eps}
+\end{center}
+
+Lo cual es lógico porque estamos (prácticamente) en invierno, y las heladas no permitirían crecer ningún cultivo.\\
+
+\subsection{Ejemplo 2}
+
+El siguiente ejemplo es el día 23/01/2016, los datos ambientales fueron extraídos de http://www.eeaoc.org.ar/.  \\
+Representa un caso en que nuestro sistema recomienda comenzar a sembrar:\\
+    
+		\begin{center}
+		\includegraphics[scale=0.65]{ejok.eps}
+		\end{center}
+
+
+
+\end{document}
